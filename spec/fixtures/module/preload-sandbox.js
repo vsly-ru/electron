@@ -11,7 +11,11 @@
       window.test = {
         env: process.env,
         execPath: process.execPath,
-        platform: process.platform
+        pid: process.pid,
+        arch: process.arch,
+        platform: process.platform,
+        version: process.version,
+        versions: process.versions
       }
     }
   } else if (location.href !== 'about:blank') {
