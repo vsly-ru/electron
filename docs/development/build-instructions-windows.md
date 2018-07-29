@@ -7,7 +7,7 @@ Follow the guidelines below for building Electron on Windows.
 * Windows 7 / Server 2008 R2 or higher
 * Visual Studio 2017 15.7.2 or higher - [download VS 2017 Community Edition for
   free](https://www.visualstudio.com/vs/)
-* [Python 2.7](http://www.python.org/download/releases/2.7/)
+* [Python 2.7](https://www.python.org/downloads/release/python-2715/)
 * [Node.js](https://nodejs.org/download/)
 * [Git](http://git-scm.com)
 * [Debugging Tools for Windows](https://msdn.microsoft.com/en-us/library/windows/hardware/ff551063.aspx)
@@ -99,6 +99,14 @@ $ npm run clean-build
 See [Build System Overview: Tests](build-system-overview.md#tests)
 
 ## Troubleshooting
+
+### AttributeError: 'module' object has no attribute 'create_default_context'
+
+```  File "C:\electron\script\tls.py", line 10, in <module>
+    ctx = ssl.create_default_context()
+    AttributeError: 'module' object has no attribute 'create_default_context'
+```
+Link to `Python 2.7` in this manual was actually to `2.7.0` version (now updated to 2.7.15) which doesn't support SSL. Simply install Python 2.7.9 or up.
 
 ### Command xxxx not found
 
